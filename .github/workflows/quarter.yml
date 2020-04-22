@@ -1,4 +1,4 @@
-name: Hourly
+name: Every 15 minutes
 
 on:
   schedule:
