@@ -11,3 +11,4 @@ jobs:
 
     steps:
       - run: date && curl -sm 60 https://kuayu.herokuapp.com
+      - run: date && curl -sm 60 https://new-ss-proxy.herokuapp.com
