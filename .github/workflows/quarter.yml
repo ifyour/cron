@@ -12,4 +12,4 @@ jobs:
     steps:
       - run: date && curl -sm 60 https://kuayu.herokuapp.com
       - run: date && curl -sm 60 https://us-wsp.herokuapp.com
-      - run: date && curl -sm 60 https://eur-wsp.herokuapp.com
+#       - run: date && curl -sm 60 https://eur-wsp.herokuapp.com
