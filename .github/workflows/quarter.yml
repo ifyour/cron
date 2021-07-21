@@ -1,8 +1,8 @@
-name: Every 15 minutes
+name: Every 25 minutes
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/25 * * * *'
 
 jobs:
   triggers:
@@ -10,6 +10,4 @@ jobs:
     timeout-minutes: 10
 
     steps:
-#       - run: date && curl -sm 60 https://kuayu.herokuapp.com
       - run: date && curl -sm 60 https://us-wsp.herokuapp.com
-#       - run: date && curl -sm 60 https://eur-wsp.herokuapp.com
