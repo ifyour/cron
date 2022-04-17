@@ -1,4 +1,4 @@
-name: GLaDOS-CheckIn
+name: GLaDOS checkin
 on:
   workflow_dispatch:
   push:
@@ -12,13 +12,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: setup Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
           node-version: "14.x"
-      - name: install depend
+      - name: Install depend
         run: npm i
-      - name: run checkin script
+      - name: Run checkin script
         run: node checkin.js
         env:
           PUSHPLUS: ${{ secrets.PUSHPLUS }}
