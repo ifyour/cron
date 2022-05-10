@@ -6,9 +6,10 @@ const checkIn = async (cookie) => {
     url: "https://glados.rocks/api/user/checkin",
     headers: {
       Cookie: cookie,
+      "content-type": "application/json;charset=UTF-8",
     },
     data: {
-      token: "glados_network",
+      token: "glados.network",
     },
   });
 };
