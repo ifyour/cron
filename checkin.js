@@ -44,11 +44,11 @@ const pushplus = (token, infos) => {
   const checkStatus = infos?.[0]["签到情况"];
   const data = {
     token,
-    title: `剩${LeftDays}天,${checkStatus.substring(80)}!`,
+    title: `剩${LeftDays}天,${checkStatus}!`,
     content: JSON.stringify(infos),
     template: "json",
   };
-  console.log(email, data);
+  console.log("PushPlus params >>", data);
   return axios({
     method: "post",
     url: `http://www.pushplus.plus/send`,
@@ -63,7 +63,8 @@ const GLaDOSCheckIn = async () => {
     const infos = await Promise.all(
       cookies.map(async (cookie) => await checkInAndGetStatus(cookie))
     );
-    console.log(infos);
+
+    console.log("CheckIn result>>", infos);
 
     const PUSHPLUS = process.env.PUSHPLUS;
 
